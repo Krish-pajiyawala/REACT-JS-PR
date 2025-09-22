@@ -1,0 +1,47 @@
+.border {
+  border: 5px solid #4caf50;
+  padding: 16px;
+  border-radius: 16px;
+  width: 350px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #ffffff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.border:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;       /* round profile image */
+  object-fit: cover;        /* crop properly */
+  object-position: center;
+  margin-bottom: 12px;
+  border: 3px solid #4caf50;
+  transition: transform 0.3s ease;
+}
+
+.image:hover {
+  transform: rotate(5deg) scale(1.1);
+}
+
+.name,.age,.from {
+  margin: 8px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.name b {
+  color: #4caf50;
+  font-size: 18px;
+}
+
+.age b,.from b {
+  color: #555;
+}
