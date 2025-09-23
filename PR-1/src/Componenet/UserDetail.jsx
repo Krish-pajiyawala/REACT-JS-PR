@@ -6,7 +6,6 @@ class UserDetail extends React.Component {
         super()
     }
   render() {
-    const { name, age, form } = this.props;
 
     return (
       <div className="border"
@@ -25,6 +24,9 @@ class UserDetail extends React.Component {
         </p>
         <p className="age">
           <b>Age:{this.props.age}</b> 
+        </p>
+        <p className="dob">
+          <b>dob:{this.props.dob}</b>
         </p>
         <p className="from">
           <b>From:{this.props.from}</b>

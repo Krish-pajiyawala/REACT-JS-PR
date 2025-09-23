@@ -40,3 +40,13 @@
 .read-the-docs {
   color: #888;
 }
+
+.colum{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px;
+}
+
+h1{
+  color: #4caf50;
+}
