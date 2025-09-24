@@ -10,9 +10,7 @@ function Counter() {
       <h2>{count}</h2>
 
       <div className="button-group">
-        <button 
-          onClick={() => count <= 0 ? alert("Counter is already 0") : setCount(count - 1)}
-        >
+        <button onClick={() => count <= 0 ? alert("Counter is already 0") : setCount(count - 1)}>
           Decrement
         </button>
 
