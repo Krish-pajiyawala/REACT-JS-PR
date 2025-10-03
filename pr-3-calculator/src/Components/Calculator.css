@@ -1,0 +1,132 @@
+h2{
+    color: green;
+}
+
+.calc-root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.calc-shell {
+  background-color: #000;
+  border-radius: 20px; /* thoda zyada round iPhone look */
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  width: 320px;
+  max-width: 100%;
+}
+
+.calc-display {
+  background-color: #1a1a1a;
+  color: white;
+  font-size: 3rem;
+  text-align: right;
+  padding: 20px 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  word-break: break-word;   /* ✅ fix: break-all hata kar word-wrap sahi */
+  overflow: hidden;
+}
+
+.calc-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.btn {
+  border: none;
+  border-radius: 50%;       /* ✅ circle button */
+  font-size: 1.5rem;
+  height: 70px;
+  width: 70px;              /* ✅ width bhi fix kiya (pehle sirf height thi) */
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+/* Number buttons */
+.btn:not(.func):not(.op):not(.eq) {
+  background-color: #333;
+  color: white;
+}
+
+.btn:not(.func):not(.op):not(.eq):hover {
+  background-color: #555;
+}
+
+/* Function buttons (AC, ±, %) */
+.btn.func {
+  background-color: #a5a5a5;
+  color: black;
+}
+
+.btn.func:hover {
+  background-color: #d4d4d4;
+}
+
+/* Operator buttons (÷, ×, −, +) */
+.btn.op {
+  background-color: #ff9500;
+  color: white;
+}
+
+.btn.op:hover {
+  background-color: #ffb143;
+}
+
+/* Equals button */
+.btn.eq {
+  background-color: #ff9500;
+  color: white;
+}
+
+.btn.eq:hover {
+  background-color: #ffb143;
+}
+
+/* Zero button - spans two columns */
+.btn.zero {
+  grid-column: span 2;
+  border-radius: 35px;   /* ✅ oval look */
+  width: auto;           /* ✅ override width: auto so it spans full */
+  justify-content: flex-start;
+  padding-left: 25px;
+}
+
+/* Responsive design */
+@media (max-width: 400px) {
+  .calc-shell {
+    padding: 15px;
+    width: 280px;
+  }
+
+  .btn {
+    height: 60px;
+    width: 60px;          /* ✅ responsive fix */
+    font-size: 1.3rem;
+  }
+
+  .calc-display {
+    font-size: 2.5rem;
+    min-height: 70px;
+    padding: 15px 10px;
+  }
+}
