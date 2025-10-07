@@ -1,0 +1,86 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #34656D 0%, #5D866C 100%);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.form-container {
+  width: 350px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 25px 30px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  color: #fff;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.form-container label {
+  display: block;
+  margin: 12px 0 6px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.form-container input,.form-container textarea {
+  width: 90%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 14px;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  outline: none;
+  transition: 0.3s;
+}
+
+.form-container input::placeholder,.form-container textarea::placeholder {
+  color: #eeeeee;
+}
+
+.form-container input:focus,.form-container textarea:focus {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 6px #5D866C;
+}
+
+.form-container textarea {
+  resize: none;
+  min-height: 80px;
+}
+
+.form-container button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(45deg, #34656D, #5D866C);
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form-container button:hover {
+  background: linear-gradient(45deg, #5D866C, #34656D);
+  transform: translateY(-2px);
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
