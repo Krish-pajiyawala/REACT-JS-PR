@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./form.css";
+import "./Form.css";
 
 function Form() {
   const [formData, setFormData] = useState({
@@ -58,50 +58,25 @@ function Form() {
     <div className="main-container">
       <form className="form-container" onSubmit={handleSubmit}>
         <label>User Name</label>
-        <input
-          type="text"
-          name="username"
-          placeholder="Enter Your Name"
-          value={formData.username}
-          onChange={handleChange}
-        />
+        <input type="text" name="username" placeholder="Enter Your Name" value={formData.username} onChange={handleChange} />
         {errors.username && <small>{errors.username}</small>}
 
         <label>Email</label>
-        <input
-          type="email"
-          name="email"
-          placeholder="Enter Your Email"
-          value={formData.email}
-          onChange={handleChange}
-        />
+        <input type="email" name="email" placeholder="Enter Your Email" value={formData.email} onChange={handleChange} />
         {errors.email && <small>{errors.email}</small>}
 
         <label>Password</label>
-        <input
-          type="password"
-          name="password"
-          placeholder="Enter Your Password"
-          value={formData.password}
-          onChange={handleChange}
-        />
+        <input type="password" name="password" placeholder="Enter Your Password" value={formData.password} onChange={handleChange} />
         {errors.password && <small>{errors.password}</small>}
 
         <label>Review</label>
-        <textarea
-          name="review"
-          placeholder="Enter Your Review"
-          value={formData.review}
-          onChange={handleChange}
-        ></textarea>
+        <textarea name="review" placeholder="Enter Your Review" value={formData.review} onChange={handleChange} ></textarea>
         {errors.review && <small>{errors.review}</small>}
 
         <label>Rating</label>
         <div style={{ marginBottom: "10px" }}>
           {[1, 2, 3, 4, 5].map((star) => (
-            <span
-              key={star}
-              onClick={() => handleRating(star)}
+            <span key={star} onClick={() => handleRating(star)}
               style={{
                 cursor: "pointer",
                 fontSize: "22px",
