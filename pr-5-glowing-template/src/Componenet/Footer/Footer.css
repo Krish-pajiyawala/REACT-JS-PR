@@ -1,3 +1,16 @@
 li{
   margin-bottom: 10px;
 }
+
+.footer-link li a {
+   color: #7E7E7E;
+  
+}
+
+.footer-link li a:hover{
+  color: black;
+}
+
+.footer-icons span {
+  color: unset ;
+}

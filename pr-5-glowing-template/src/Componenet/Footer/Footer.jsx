@@ -16,37 +16,37 @@ import discover from './Icons/discover.svg'
 const Footer = () => {
   return (
        <footer className="bg-light text-dark py-5 px-4">
-        <Row>
-          <Col md={2} className="mb-4">
+        <Row className="px-5 px-lg-0">
+          <Col sm={6}lg={4} xl={3}  className="mb-4 pe-5 ">
             <h5>Company</h5>
-            <p>Find a location nearest you. See <strong>Our Stores</strong></p>
-            <p><strong>+391 (0)35 2568 4593</strong></p>
+            <p className="pe-5">Find a location nearest you. See <span className="text-black fw-medium">Our Stores</span></p>
+            <p><span className="text-black fw-medium">+391 (0)35 2568 4593</span></p>
             <p>hello@domain.com</p>
           </Col>
 
-          <Col md={2} className="mb-4">
-            <h5>Useful Links</h5>
-            <ul className="list-unstyled">
-              <li>New Products</li>
-              <li>Best Sellers</li>
-              <li>Bundle & Save</li>
-              <li>Online Gift Card</li>
-            </ul>
-          </Col>
+          <Col sm={6} lg={4} xl={3} className="mb-4">
+  <h5>Useful Links</h5>
+  <ul className="list-unstyled footer-link">
+    <li><a href="#" className="text-decoration-none">New Products</a></li>
+    <li><a href="#" className="text-decoration-none">Best Sellers</a></li>
+    <li><a href="#" className="text-decoration-none">Bundle & Save</a></li>
+    <li><a href="#" className="text-decoration-none">Online Gift Card</a></li>
+  </ul>
+</Col>
 
-          <Col md={2} className="mb-4">
-            <h5>Information</h5>
-            <ul className="list-unstyled">
-              <li>Start A Return</li>
-              <li>Contact Us</li>
-              <li>Shipping FAQ</li>
-              <li>Terms & Conditions</li>
-              <li>Privacy Policy</li>
-            </ul>
-          </Col>
+<Col sm={6} lg={4} xl={3} className="mb-4">
+  <h5>Information</h5>
+  <ul className="list-unstyled footer-link">
+    <li><a href="#" className="text-decoration-none">Start A Return</a></li>
+    <li><a href="#" className="text-decoration-none">Contact Us</a></li>
+    <li><a href="#" className="text-decoration-none">Shipping FAQ</a></li>
+    <li><a href="#" className="text-decoration-none">Terms & Conditions</a></li>
+    <li><a href="#" className="text-decoration-none">Privacy Policy</a></li>
+  </ul>
+</Col>
 
-          <Col md={5} className="mb-4">
-            <h5>Good emails.</h5>
+          <Col xs={12} sm={6}  xl={3} className="mb-4">
+            <h3>Good emails.</h3>
             <p>Enter your email below to be the first to know about new collections and product launches.</p>
             <InputGroup className="mb-3">
               <Form.Control
@@ -63,7 +63,7 @@ const Footer = () => {
        
 
         <Row className="align-items-center pt-5">
-          <Col md={4} className="text-center text-md-start mb-2 mb-md-0">
+          <Col md={4} className="text-center footer-icons text-md-start mb-2 mb-md-0">
             <small className="me-3">© Glowing 2025 | Powered by Shopify</small>
             <span className="me-2"><FaInstagram className="fs-5"/></span>
             <span className="me-2"><FaXTwitter className="fs-5"/></span>

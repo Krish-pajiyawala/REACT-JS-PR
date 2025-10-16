@@ -1,41 +1,138 @@
-.color-circle {
+.sidebar {
+  position: sticky;
+  top: 90px;
+  align-self: flex-start;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  height: fit-content;
+  z-index: 10;
+}
+
+.filter-title {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.color-list .color-circle {
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  border: 1px solid #ccc;
-  cursor: pointer;
+  border: 1px solid #ddd;
 }
 
-.product-card {
-  border: none;
-  transition: all 0.3s ease;
-  height: 100%;
-}
-
-.product-card:hover {
-  transform: translateY(-4px);
+.price-text {
+  font-size: 14px;
+  color: #555;
 }
 
 .tag {
   position: absolute;
   top: 10px;
   left: 10px;
-  background: #000;
-  color: #fff;
-  font-size: 12px;
+  background: black;
+  color: white;
   padding: 3px 8px;
-  border-radius: 4px;
-  text-transform: uppercase;
+  border-radius: 5px;
+  font-size: 12px;
 }
 
-.tag.new {
-  background-color: #d9534f;
+.currant-page {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.currant-page p {
+  font-size: 15px;
+  color: #666;
+  letter-spacing: 0.3px;
+}
+
+.currant-page span {
+  font-weight: 600;
+  color: #000;
+  transition: color 0.3s ease;
 }
 
 .tag.sale {
-  background-color: #5cb85c;
+  background: #2a9d8f;
+  z-index: 9;
 }
 
-.card img {
-  object-fit: contain;
+.tag.new {
+  background: #e63946;
+  z-index: 9;
 }
+
+.product-card img {
+  transition: transform 0.6s ease, opacity 0.6s ease; 
+}
+
+.product-card:hover img {
+  transform: scale(1.1); 
+  opacity: 0.95;
+}
+
+/* --- Hover Action Buttons --- */
+.product-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-card .hover-actions {
+  position: absolute;
+  top: 10px;
+  right: -50px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.product-card:hover .hover-actions {
+  right: 10px;
+  opacity: 1;
+}
+
+.hover-actions button {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hover-actions button:hover {
+  background: black;
+  color: white;
+  border-color: black;
+}
+
+/* --- Bottom Add to Cart Button --- */
+.product-card .bottom-btn {
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 8px 0;
+  border-radius: 6px;
+  font-size: 14px;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.product-card:hover .bottom-btn {
+  opacity: 1;
+  bottom: 20%;
+}
+
