@@ -1,0 +1,19 @@
+.what-card {
+  border-radius: 15px;
+  background-color: #fff;
+}
+
+/* Card image */
+.about-card-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.red-bar {
+  width: 6px;
+  height: 25px;
+  background-color: #ff3c00;
+  border-radius: 3px;
+}

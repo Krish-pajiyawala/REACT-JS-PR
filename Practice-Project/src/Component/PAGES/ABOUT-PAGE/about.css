@@ -1,0 +1,133 @@
+/* 🔹 Hero Section */
+.about-hero {
+  background: url("https://official.garena.com/intl/v1/config/banner_ff.jpg") center/cover no-repeat;
+  min-height: 60vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: white;
+  text-align: left;
+}
+
+.about-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.about-hero h1,
+.about-hero p {
+  position: relative;
+  z-index: 2;
+}
+
+/* 🔹 Company Intro */
+.company-intro img {
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.company-intro h2 {
+  color: #ff3c00;
+  font-weight: 700;
+}
+
+/* 🔹 What We Do Section */
+.what-we-do {
+  background: #fff;
+}
+
+.what-card {
+  border-radius: 15px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.what-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.about-card-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.red-bar {
+  width: 6px;
+  height: 25px;
+  background-color: #ff3c00;
+  border-radius: 3px;
+}
+
+/* 🔹 Mission & Vision Section */
+.mission-section {
+  background: #f8f9fa;
+}
+
+.mission-section h2 {
+  color: #111;
+  font-weight: 700;
+}
+
+.mission-section h4 {
+  color: #ff3c00;
+  font-weight: 600;
+}
+
+.mission-section .shadow-sm {
+  transition: all 0.3s ease;
+}
+
+.mission-section .shadow-sm:hover {
+  transform: translateY(-5px);
+}
+
+/* 🔹 Team Section */
+.team-section {
+  background: #fff;
+}
+
+.team-card {
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.team-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border: 3px solid #ff3c00;
+  border-radius: 50%;
+}
+
+/* 🔹 Responsive Adjustments */
+@media (max-width: 768px) {
+  .about-hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .about-hero p {
+    width: 100% !important;
+    font-size: 1rem;
+  }
+
+  .team-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .about-card-img {
+    height: 180px;
+  }
+}

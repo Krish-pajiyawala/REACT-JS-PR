@@ -1,0 +1,119 @@
+.about-glowing {
+  background: rgb(255, 253, 253);
+  padding: 60px 0;
+  min-height: auto;
+  display: flex;
+  align-items: center;
+}
+
+.glow-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 1.5rem;
+}
+
+.glow-desc {
+  color: #555;
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+/* IMAGE */
+.glow-img-wrap {
+  position: relative;
+  overflow: hidden;
+  /* border-radius: 12px; */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.glow-img {
+  width: 100%;
+  /* border-radius: 12px; */
+  transition: transform 0.6s ease;
+}
+
+.glow-img-wrap:hover .glow-img {
+  transform: scale(1.05);
+}
+
+/* SHINE EFFECT */
+.shine {
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.45) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-25deg);
+}
+
+.glow-img-wrap:hover .shine {
+  animation: shine-move 0.7s forwards;
+}
+
+@keyframes shine-move {
+  0% {
+    left: -75%;
+  }
+  100% {
+    left: 125%;
+  }
+}
+
+/* TEXT RIGHT*/
+.glow-subtitle {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #000;
+  /* background-color: blanchedalmond; */
+}
+
+.glow-subtext {
+  color: #777;
+  font-size: 0.95rem;
+}
+
+.glow-contact {
+  color: #2e8b57;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+.glow-time {
+  color: #444;
+  margin: 3px 0;
+}
+
+.glow-time span {
+  float: right;
+  color: #000;
+  font-weight: 500;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .about-glowing {
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .glow-title {
+    font-size: 2rem;
+  }
+
+  .glow-img-wrap {
+    margin-bottom: 25px;
+  }
+
+  .glow-time span {
+    float: none;
+    display: block;
+  }
+}

@@ -1,0 +1,127 @@
+/* 🔹 General Page */
+.modes-page {
+  background-color: #0b0f19;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* 🔹 Hero Section */
+.modes-hero {
+  background: url("https://cdn.now.gg/apps-content/com.dts.freefireth/fullhd-bg/free-fire.jpg")
+    center/cover no-repeat;
+  min-height: 70vh;
+  position: relative;
+  color: #fff;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.6);
+}
+
+.modes-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modes-hero h1,
+.modes-hero p {
+  position: relative;
+  z-index: 2;
+}
+
+.highlight {
+  color: #ffba00;
+}
+
+/* 🔹 Modes Cards Section */
+.section-title {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.mode-card {
+  background-color: #121826;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.mode-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(255, 186, 0, 0.25);
+}
+
+.image-container {
+  width: 100%;
+  height: 230px;
+  overflow: hidden;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.mode-card:hover .card-img-top {
+  transform: scale(1.1);
+}
+
+/* 🔹 Info Section (White Background) */
+.modes-info {
+  background: #fff;
+  color: #111;
+  border-top: 1px solid #eee;
+}
+
+.modes-info h2 {
+  color: #111;
+  font-weight: 700;
+}
+
+.modes-info .highlight {
+  color: #ffba00;
+}
+
+.modes-info p {
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+/* Image Container Fix */
+.info-img-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.info-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/* 🔹 Responsive */
+@media (max-width: 768px) {
+  .modes-hero h1 {
+    font-size: 2rem;
+  }
+
+  .modes-hero p {
+    font-size: 1rem;
+    width: 100% !important;
+  }
+
+  .image-container {
+    height: 180px;
+  }
+
+  .modes-info {
+    text-align: center;
+  }
+
+  .modes-info img {
+    margin-bottom: 20px;
+  }
+}

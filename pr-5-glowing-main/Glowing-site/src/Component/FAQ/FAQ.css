@@ -1,0 +1,62 @@
+.accordion-button {
+  font-weight: 700 !important;
+  color: #000 !important;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #f8f9fa !important;
+  font-weight: 800 !important; 
+}
+
+.container .accordion-button {
+  font-weight: 700 !important;
+  color: #000 !important;
+}
+
+.faq-section {
+  background-color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+.faq-image-container {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.faq-image {
+  width: 1170px;
+  height: 420px;
+  transition: transform 0.5s ease, filter 0.5s ease;
+  border-radius: 10px;
+}
+
+/* Hover effects */
+.faq-image-container:hover .faq-image {
+  transform: scale(1.05);
+  filter: brightness(70%);
+}
+
+.faq-hover-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.faq-image-container:hover .faq-hover-text {
+  opacity: 1;
+}
+
+.faq-hover-text h4 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.faq-hover-text p {
+  font-size: 1rem;
+}

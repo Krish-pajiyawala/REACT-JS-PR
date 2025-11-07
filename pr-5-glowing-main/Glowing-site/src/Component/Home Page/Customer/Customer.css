@@ -1,0 +1,139 @@
+.customer-section {
+  padding: 50px 20px;
+  background-color: #fff;
+}
+.image-text-section {
+  position: relative;
+  overflow: hidden;
+}
+.image-text-section img:hover {
+  scale: 1.08;
+  transition: all 0.5s ease-in-out;
+}
+
+.promo-image {
+  width: 100%;
+  border-radius: 2px;
+}
+.customer-section p{
+  max-width: 585px;
+  margin: 0 auto;
+}
+.promo-text {
+  position: absolute;
+  bottom: 118px;
+  left: 60px;
+  color: #fff;
+  text-align: left;
+}
+.promo-text h2 {
+  font-size: 35px;
+  font-weight: medium;
+}
+.promo-text p {
+  font-size: 16px;
+  margin: 20px 0;
+}
+.promo-text .btn {
+  padding: 12px 32px;
+  font-size: 16px;
+  border-radius: 3px;
+  font-weight: medium;
+}
+.product-card {
+  border: none;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.hover-image {
+  transition: transform 0.5s ease-in-out;
+}
+
+.product-card:hover .hover-image {
+  transform: scale(1.1);
+}
+
+.product-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 12px;
+  padding: 4px 8px;
+  z-index: 2;
+}
+
+.product-price {
+  margin-bottom: 5px;
+}
+
+.hover-overlay {
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.hover-overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.hover-overlay .btn {
+  transform: translateY(20%);
+  opacity: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background-color: #fff;
+  color: #000;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hover-overlay .btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.hover-overlay.show .btn {
+  transform: translateY(10%);
+  opacity: 1;
+}
+
+.btn-class .button1 {
+  transform: translateY(20%);
+  transition: all 0.4s ease-in-out;
+}
+
+.btn-class .button2 {
+  transform: translateY(40%);
+  transition: all 0.6s ease-in-out;
+}
+
+.btn-class .button3 {
+  transform: translateY(60%);
+  transition: all 0.8s ease-in-out;
+}
+
+.btn-class .button4 {
+  transform: translateY(80%);
+  transition: all 0.9s ease-in-out;
+}
+
+.promo-text .btn:hover {
+  background-color: #4E7661;
+  color: #fff;
+}

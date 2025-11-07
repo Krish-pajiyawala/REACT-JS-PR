@@ -1,0 +1,26 @@
+.currant-page{
+  background-color: #f5f5f5;
+}
+
+.text-color{
+  color: #7E7E7E;
+}
+
+.text-body-color{
+  color: #7E7E7E !important;
+font-size: 15px;
+}
+
+.under-line{
+  position: relative;
+}
+.under-line::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: black;
+  bottom: -5px;
+}
+
+
