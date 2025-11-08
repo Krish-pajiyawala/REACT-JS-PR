@@ -86,7 +86,7 @@ function Employe() {
     return (
         <>
             <Container fluid className="employee-bg">
-                <h1 className="text-center mb-4 gradient-heading">Employee Portal</h1>
+                <h1 className="text-center mb-4 gradient-heading">EMPLOYE PORTAL</h1>
 
                 <div className="form-container mx-auto p-4">
                     <Form onSubmit={handalsubmit}>
