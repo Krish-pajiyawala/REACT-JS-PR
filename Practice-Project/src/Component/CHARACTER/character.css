@@ -1,9 +1,7 @@
-/* White background for section */
 .team-section {
   background-color: #ffffff;
 }
 
-/* Accent colors */
 .text-gold {
   color: #ffba00;
 }
@@ -15,10 +13,9 @@
   border-radius: 5px;
 }
 
-/* Card design (unchanged dark style) */
 .team-card {
   position: relative;
-  background-color: #141925; /* keep dark card body */
+  background-color: #141925; 
   border-radius: 15px;
   padding-top: 60px;
   overflow: hidden;
@@ -30,7 +27,6 @@
   box-shadow: 0 8px 25px rgba(255, 186, 0, 0.3);
 }
 
-/* gold diagonal background */
 .card-bg-shape {
   position: absolute;
   top: 0;
@@ -41,7 +37,6 @@
   z-index: 0;
 }
 
-/* avatar circle */
 .avatar-wrapper {
   position: relative;
   z-index: 1;
@@ -54,7 +49,6 @@
   box-shadow: 0 0 10px rgba(255, 186, 0, 0.4);
 }
 
-/* image fit */
 .avatar-img {
   width: 100%;
   height: 100%;
@@ -67,7 +61,6 @@
   transform: scale(1.08);
 }
 
-/* card text */
 .card-body {
   position: relative;
   z-index: 1;

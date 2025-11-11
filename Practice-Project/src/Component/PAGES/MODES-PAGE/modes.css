@@ -1,11 +1,9 @@
-/* 🔹 General Page */
 .modes-page {
   background-color: #0b0f19;
   color: #fff;
   overflow-x: hidden;
 }
 
-/* 🔹 Hero Section */
 .modes-hero {
   background: url("https://cdn.now.gg/apps-content/com.dts.freefireth/fullhd-bg/free-fire.jpg")
     center/cover no-repeat;
@@ -32,7 +30,6 @@
   color: #ffba00;
 }
 
-/* 🔹 Modes Cards Section */
 .section-title {
   font-weight: 700;
   font-size: 2rem;
@@ -67,7 +64,6 @@
   transform: scale(1.1);
 }
 
-/* 🔹 Info Section (White Background) */
 .modes-info {
   background: #fff;
   color: #111;
@@ -88,7 +84,6 @@
   font-size: 1rem;
 }
 
-/* Image Container Fix */
 .info-img-wrapper {
   width: 100%;
   height: 100%;
@@ -102,7 +97,6 @@
   border-radius: 15px;
 }
 
-/* 🔹 Responsive */
 @media (max-width: 768px) {
   .modes-hero h1 {
     font-size: 2rem;

@@ -13,7 +13,6 @@ const Footer = () => {
     <footer className="footer-section py-5">
       <Container>
         <Row className="gy-4">
-          {/* --- Left Column --- */}
           <Col md={6} lg={4}>
             <div className="footer-logo mb-3 d-flex align-items-center">
               <div className="logo-box me-2">
@@ -49,7 +48,6 @@ const Footer = () => {
             </div>
           </Col>
 
-          {/* --- Middle Links --- */}
           <Col md={3} lg={2}>
             <h5 className="footer-heading">Quick Links</h5>
             <ul className="footer-links">
@@ -72,7 +70,6 @@ const Footer = () => {
             </ul>
           </Col>
 
-          {/* --- Newsletter --- */}
           <Col lg={4}>
             <h5 className="footer-heading">Contact Us</h5>
             <p className="text-white-50">
@@ -92,7 +89,6 @@ const Footer = () => {
         </Row>
       </Container>
 
-      {/* --- Bottom Bar --- */}
       <div className="footer-bottom py-3 mt-5">
         <Container>
           <Row className="align-items-center text-center text-md-start">

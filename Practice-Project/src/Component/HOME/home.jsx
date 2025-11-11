@@ -1,8 +1,12 @@
 import { Container, Row, Col, Button, Carousel } from "react-bootstrap";
 import "./home.css";
+import WhatWeDo from "../ABOUT/about";
+import DetailsSection from "../MODES/mode";
+import TeamSection from "../CHARACTER/character";
 
 const HeroSection = () => {
   return (
+    <>
     <div className="hero-section">
       <Carousel fade controls indicators={false} interval={5000} pause={false}>
         <Carousel.Item className="slide slide-1">
@@ -49,6 +53,10 @@ const HeroSection = () => {
         </Carousel.Item>
       </Carousel>
     </div>
+    <WhatWeDo/>
+    <DetailsSection/>
+    <TeamSection/>
+    </>
   );
 };
 

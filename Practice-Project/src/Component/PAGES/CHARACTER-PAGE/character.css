@@ -1,11 +1,9 @@
-/* 🔹 Page background */
 .character-page {
   background-color: #0b0f19;
   color: #fff;
   overflow-x: hidden;
 }
 
-/* 🔹 Hero Section */
 .character-hero {
   background: url("https://static.toiimg.com/thumb/resizemode-4,width-1280,height-720,msid-118631125/118631125.jpg")
     center/cover no-repeat;
@@ -30,7 +28,6 @@
   color: #ffba00;
 }
 
-/* 🔹 Section Title */
 .gold-line {
   width: 60px;
   height: 4px;
@@ -38,7 +35,6 @@
   border-radius: 5px;
 }
 
-/* 🔹 Card Design */
 .team-card {
   position: relative;
   background-color: #141925;
@@ -53,7 +49,6 @@
   box-shadow: 0 8px 25px rgba(255, 186, 0, 0.3);
 }
 
-/* 🔹 Gold diagonal background */
 .card-bg-shape {
   position: absolute;
   top: 0;
@@ -64,7 +59,6 @@
   z-index: 0;
 }
 
-/* 🔹 Avatar Style */
 .avatar-wrapper {
   position: relative;
   z-index: 1;
@@ -89,7 +83,6 @@
   transform: scale(1.08);
 }
 
-/* 🔹 Text inside cards */
 .card-body {
   position: relative;
   z-index: 1;
@@ -100,7 +93,6 @@
   font-size: 0.9rem;
 }
 
-/* 🔹 Responsive */
 @media (max-width: 768px) {
   .character-hero h1 {
     font-size: 2rem;

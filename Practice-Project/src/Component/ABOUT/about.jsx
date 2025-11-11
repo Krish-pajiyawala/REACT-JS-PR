@@ -2,7 +2,6 @@ import { Container, Row, Col, Card } from "react-bootstrap";
 import "./about.css";
 
 const WhatWeDo = () => {
-  // 🔹 Different images for each card
   const image1 = "https://official.garena.com/intl/v1/config/gallery_ff.jpg";
   const image2 = "https://official.garena.com/intl/v1/config/gallery_df.jpg";
 
@@ -11,7 +10,6 @@ const WhatWeDo = () => {
       <Container>
         <h2 className="text-center fw-bold mb-5">About Us</h2>
         <Row className="justify-content-center g-4">
-          {/* Card 1 */}
           <Col md={5} sm={12}>
             <Card className="shadow-sm border-light p-4 what-card">
               <Card.Img
@@ -37,7 +35,6 @@ const WhatWeDo = () => {
             </Card>
           </Col>
 
-          {/* Card 2 */}
           <Col md={5} sm={12}>
             <Card className="shadow-sm border-light p-4 what-card">
               <Card.Img

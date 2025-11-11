@@ -7,7 +7,6 @@ const AboutPage = () => {
 
     return (
         <>
-            {/* 🔹 Hero Section */}
             <section className="about-hero text-white d-flex align-items-center">
                 <Container>
                     <h1 className="fw-bold display-4">About Garena</h1>
@@ -18,7 +17,6 @@ const AboutPage = () => {
                 </Container>
             </section>
 
-            {/* 🔹 Company Introduction */}
             <section className="company-intro py-5 bg-light">
                 <Container>
                     <Row className="align-items-center">
@@ -45,7 +43,6 @@ const AboutPage = () => {
                 </Container>
             </section>
 
-            {/* 🔹 What We Do Section (Your Existing Cards) */}
             <section className="what-we-do py-5">
                 <Container>
                     <h2 className="text-center fw-bold mb-5">What We Do</h2>
@@ -100,7 +97,6 @@ const AboutPage = () => {
                 </Container>
             </section>
 
-            {/* 🔹 Mission and Vision */}
             <section className="mission-section py-5 bg-light">
                 <Container>
                     <h2 className="text-center fw-bold mb-5">Our Mission & Vision</h2>
@@ -127,7 +123,6 @@ const AboutPage = () => {
                 </Container>
             </section>
 
-            {/* 🔹 Team Section */}
             <section className="team-section py-5">
                 <Container>
                     <h2 className="text-center fw-bold mb-5">Meet Our Team</h2>

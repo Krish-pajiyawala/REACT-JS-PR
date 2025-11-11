@@ -37,7 +37,6 @@ const modesData = [
 const ModesPage = () => {
   return (
     <div className="modes-page">
-      {/* 🔹 Hero Section */}
       <section className="modes-hero d-flex align-items-center">
         <Container>
           <h1 className="fw-bold display-5">
@@ -49,7 +48,6 @@ const ModesPage = () => {
         </Container>
       </section>
 
-      {/* 🔹 Modes Cards Section */}
       <section className="modes-list py-5">
         <Container>
           <h2 className="text-center mb-5 section-title">
@@ -77,7 +75,6 @@ const ModesPage = () => {
         </Container>
       </section>
 
-      {/* 🔹 Description / Info Section */}
       <section className="modes-info py-5">
         <Container>
           <Row className="align-items-center">

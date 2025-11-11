@@ -10,19 +10,19 @@ import ModesPage from './Component/PAGES/MODES-PAGE/modes';
 import Character from './Component/CHARACTER/character';
 import CharacterPage from './Component/PAGES/CHARACTER-PAGE/character';
 import Footer from './Component/FOOTER/footer';
+import { Route, Routes } from 'react-router-dom';
 
 function App() {
 
   return (
     <>
       <Header />
-      {/* <AboutPage /> */}
-      {/* <ModesPage /> */}
-      {/* <CharacterPage /> */}
-      {/* <Home /> */}
-      {/* <About /> */}
-      {/* <Modes /> */}
-      {/* <Character /> */}
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/aboutus' element={<AboutPage />} />
+        <Route path='/modes' element={<ModesPage />} />
+        <Route path='/character' element={<CharacterPage />} />
+      </Routes>
       <Footer />
     </>
   )

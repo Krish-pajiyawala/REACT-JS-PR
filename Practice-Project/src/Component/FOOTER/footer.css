@@ -99,18 +99,15 @@
   background: #e0a800;
 }
 
-/* Divider */
 .footer-divider {
   border-color: rgba(255, 255, 255, 0.1);
 }
 
-/* ✅ Bottom Section (White Background) */
 .footer-bottom {
   background-color: #fff;
   border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .footer-section {
     text-align: center;

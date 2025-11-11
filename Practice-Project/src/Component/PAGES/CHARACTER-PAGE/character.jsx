@@ -43,7 +43,6 @@ const characters = [
 const CharacterPage = () => {
   return (
     <div className="character-page">
-      {/* 🔹 Hero Section */}
       <section className="character-hero d-flex align-items-center text-center">
         <Container>
           <h1 className="fw-bold display-5 text-white">
@@ -56,7 +55,6 @@ const CharacterPage = () => {
         </Container>
       </section>
 
-      {/* 🔹 Character Grid */}
       <section className="team-section py-5 text-center">
         <Container>
           <p className="text-gold fw-semibold small mb-1">OUR CHARACTER LINEUP</p>
