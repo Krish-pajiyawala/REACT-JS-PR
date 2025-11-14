@@ -1,0 +1,115 @@
+.movie-list-container {
+  min-height: 100vh;
+  background: radial-gradient(circle at top left, #141e30, #243b55);
+  color: #fff;
+  padding: 40px;
+  text-align: center;
+}
+
+.movie-list-container h2 {
+  color: #00e0ff;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-shadow: 0 0 8px rgba(0, 224, 255, 0.6);
+}
+
+.movie-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.movie-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+  overflow: hidden;
+  width: 220px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.movie-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 224, 255, 0.5);
+}
+
+.movie-card img {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+  border-bottom: 2px solid #00e0ff;
+}
+
+.movie-info {
+  padding: 12px;
+  text-align: left;
+}
+
+.movie-info h4 {
+  font-size: 1.1rem;
+  margin: 5px 0;
+  color: #fff;
+}
+
+.movie-info p {
+  font-size: 0.9rem;
+  color: #ddd;
+  margin: 4px 0;
+}
+
+.movie-info strong {
+  color: #00e0ff;
+}
+
+.no-movies {
+  color: #bbb;
+  font-size: 1.1rem;
+  margin-top: 40px;
+}
+
+@media (max-width: 600px) {
+  .movie-card {
+    width: 90%;
+  }
+}
+
+.movie-actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-top: 1px solid rgba(0, 224, 255, 0.3);
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.movie-actions button {
+  flex: 1;
+  margin: 0 5px;
+  padding: 8px 0;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  color: #fff;
+}
+
+.edit-btn {
+  background: #00bcd4;
+}
+
+.edit-btn:hover {
+  background: #00e0ff;
+  transform: scale(1.05);
+}
+
+.delete-btn {
+  background: #ff3b3b;
+}
+
+.delete-btn:hover {
+  background: #ff6161;
+  transform: scale(1.05);
+}
+

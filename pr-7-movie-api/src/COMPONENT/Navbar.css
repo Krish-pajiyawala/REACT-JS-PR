@@ -1,0 +1,38 @@
+.navbar {
+  background: linear-gradient(90deg, #141e30, #243b55);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Left side: Logo or title */
+.navbar h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+/* Right side: Links */
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #00e0ff;
+  transform: scale(1.1);
+}
