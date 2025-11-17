@@ -17,7 +17,6 @@ function MovieList() {
     setMovies(storedMovies);
   }, []);
 
-  // compute unique genres and languages for filter dropdowns
   const genres = useMemo(() => {
     const set = new Set();
     movies.forEach((m) => {
@@ -40,7 +39,6 @@ function MovieList() {
     let list = movies.filter((m) => {
       if (!m) return false;
 
-      // search across title, director, cast, genre
       if (term) {
         const inTitle = m.title && m.title.toLowerCase().includes(term);
         const inDirector = m.director && m.director.toLowerCase().includes(term);
