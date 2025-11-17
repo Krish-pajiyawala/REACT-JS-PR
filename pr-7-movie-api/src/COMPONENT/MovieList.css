@@ -113,3 +113,84 @@
   transform: scale(1.05);
 }
 
+/* Controls (search / filters / sort) */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.controls input.search-input,
+.controls select {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(0, 224, 255, 0.12);
+  color: #e6faff;
+  padding: 8px 10px;
+  border-radius: 8px;
+  min-width: 140px;
+  outline: none;
+  transition: box-shadow 0.15s ease, transform 0.12s ease;
+  box-sizing: border-box;
+}
+
+.controls input.search-input {
+  min-width: 260px;
+}
+
+.controls input.search-input:focus,
+.controls select:focus {
+  box-shadow: 0 4px 18px rgba(0, 224, 255, 0.12);
+  transform: translateY(-1px);
+}
+
+/* Make selects visually match the search input and show a custom chevron */
+.controls select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-right: 36px; /* space for chevron */
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23e6faff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  cursor: pointer;
+}
+
+/* Improve contrast of native option backgrounds in some browsers */
+.controls select option {
+  background-color: #061217;
+  color: #e6faff;
+}
+
+.controls .sort-order,
+.controls .reset-filters {
+  background: rgba(0, 224, 255, 0.12);
+  color: #00262e;
+  border: 1px solid rgba(0, 224, 255, 0.2);
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.controls .sort-order:hover,
+.controls .reset-filters:hover {
+  background: #00e0ff;
+  color: #062026;
+}
+
+@media (max-width: 700px) {
+  .controls input.search-input {
+    min-width: 160px;
+    width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .controls select {
+    min-width: 120px;
+    flex: 1 1 45%;
+  }
+}
+
