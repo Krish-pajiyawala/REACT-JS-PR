@@ -36,11 +36,10 @@ function Header() {
 
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto ms-3">
-              <Nav.Link as={Link} to="/man">MEN</Nav.Link>
-              <Nav.Link as={Link} to="/women">WOMEN</Nav.Link>
-              <Nav.Link as={Link} to="/kids">KIDS</Nav.Link>
-              <Nav.Link as={Link} to="/home">HOME</Nav.Link>
-              <Nav.Link as={Link} to="/beauty">BEAUTY</Nav.Link>
+              <Nav.Link as={Link} to="/home" className="mx-3">HOME</Nav.Link> 
+              <Nav.Link as={Link} to="/man" className="mx-3">MEN</Nav.Link>
+              <Nav.Link as={Link} to="/women" className="mx-3">WOMEN</Nav.Link>
+              <Nav.Link as={Link} to="/kids" className="mx-3">KIDS</Nav.Link>
             </Nav>
 
             <Form className="d-flex align-items-center me-4">

@@ -84,14 +84,21 @@ const AddProduct = () => {
     }
   };
 
+  const handleCancel = () => {
+    // Reset form and navigate back
+    setinputform(initialState);
+    setinputErr({});
+    navigate("/");
+  };
+
   const getBrandOptions = () => {
     switch (inputform.category) {
       case "men":
-        return ["Louis Philippe", "Allen Solly", "Park Avenue", "Peter England"];
+        return ["Louis Philippe", "Allen Solly", "Park Avenue", "Peter England", "H&M", "Roadster"];
       case "women":
-        return ["Zara", "H&M", "Forever 21"];
+        return ["Zara", "H&M", "Forever 21", "Mango", "Vero Moda", "Only"];
       case "kids":
-        return ["Gap Kids", "Carter's", "Mini Club"];
+        return ["Gap Kids", "Carter's", "Mini Club", "H&M Kids", "Zara Kids"];
       default:
         return [];
     }
@@ -100,11 +107,11 @@ const AddProduct = () => {
   const getsubCatagory = () => {
     switch (inputform.category) {
       case "men":
-        return ["Jeans", "T-Shirt", "Kurta"];
+        return ["Jeans", "T-Shirt", "Kurta", "Shirts", "Casual Shoes", "Formal Shoes"];
       case "women":
-        return ["Top", "Leggings", "Saree"];
+        return ["Top", "Leggings", "Saree", "Dresses", "Kurtas", "Handbags"];
       case "kids":
-        return ["Shirt", "Shorts", "Frock"];
+        return ["Shirt", "Shorts", "Frock", "T-Shirts", "Dresses", "Footwear"];
       default:
         return [];
     }
@@ -113,56 +120,66 @@ const AddProduct = () => {
   return (
     <Container
       fluid
-      className="d-flex justify-content-center align-items-center py-5"
-      style={{ backgroundColor: "#eef1f7", minHeight: "100vh" }}
+      className="d-flex justify-content-center align-items-center py-4"
+      style={{ backgroundColor: "#f5f5f6", minHeight: "100vh" }}
     >
       <Row className="justify-content-center w-100">
-        <Col md={8} lg={6}>
+        <Col md={10} lg={8}>
           <Card
-            className="border-0 shadow-lg rounded-4 add-product-card"
+            className="border-0 shadow-sm rounded-0 add-product-card"
             style={{
-              backdropFilter: "blur(10px)",
-              background: "rgba(255,255,255,0.85)",
+              background: "#ffffff",
             }}
           >
-            <Card.Body className="p-4">
-              <div className="text-center mb-4">
-                <h2 className="fw-bold" style={{ letterSpacing: ".5px" }}>
-                  🛍️ Add New Product
+            <Card.Body className="p-5">
+              {/* Header similar to Myntra */}
+              <div className="text-center mb-4 border-bottom pb-3">
+                <h2 className="fw-bold mb-2" style={{ 
+                  letterSpacing: "1px", 
+                  color: "#ff3f6c",
+                  fontSize: "28px"
+                }}>
+                  ADD NEW PRODUCT
                 </h2>
-                <p className="text-muted m-0" style={{ fontSize: "14px" }}>
-                  Fill details to add a new item to your store
+                <p className="text-muted m-0" style={{ fontSize: "14px", fontWeight: "500" }}>
+                  Fill in the product details to add to your collection
                 </p>
               </div>
 
               <Form onSubmit={handleSubmit}>
                 {/* TITLE + CATEGORY */}
-                <Row>
+                <Row className="mb-4">
                   <Col md={6}>
                     <Form.Group className="mb-3">
-                      <Form.Label className="fw-semibold">Product Title</Form.Label>
+                      <Form.Label className="fw-semibold" style={{ color: "#282c3f", fontSize: "14px" }}>
+                        PRODUCT TITLE <span style={{ color: "#ff3f6c" }}>*</span>
+                      </Form.Label>
                       <Form.Control
                         type="text"
                         name="title"
                         value={inputform.title}
                         onChange={handleChange}
-                        placeholder="eg. Blue Denim Jeans"
-                        className="custom-input"
+                        placeholder="eg. Slim Fit Blue Denim Jeans"
+                        className="myntra-input"
+                        style={{ fontSize: "14px" }}
                       />
                       {inputErr.titleErr && (
-                        <small className="text-danger">{inputErr.titleErr}</small>
+                        <small className="text-danger" style={{ fontSize: "12px" }}>{inputErr.titleErr}</small>
                       )}
                     </Form.Group>
                   </Col>
 
                   <Col md={6}>
                     <Form.Group className="mb-3">
-                      <Form.Label className="fw-semibold">Category</Form.Label>
+                      <Form.Label className="fw-semibold" style={{ color: "#282c3f", fontSize: "14px" }}>
+                        CATEGORY <span style={{ color: "#ff3f6c" }}>*</span>
+                      </Form.Label>
                       <Form.Select
                         name="category"
                         value={inputform.category}
                         onChange={handleChange}
-                        className="custom-input"
+                        className="myntra-input"
+                        style={{ fontSize: "14px" }}
                       >
                         <option value="">Select Category</option>
                         <option value="men">Men</option>
@@ -170,7 +187,7 @@ const AddProduct = () => {
                         <option value="kids">Kids</option>
                       </Form.Select>
                       {inputErr.categoryErr && (
-                        <small className="text-danger">{inputErr.categoryErr}</small>
+                        <small className="text-danger" style={{ fontSize: "12px" }}>{inputErr.categoryErr}</small>
                       )}
                     </Form.Group>
                   </Col>
@@ -178,15 +195,18 @@ const AddProduct = () => {
 
                 {/* SUBCATEGORY + BRAND */}
                 {inputform.category && (
-                  <Row>
+                  <Row className="mb-4">
                     <Col md={6}>
                       <Form.Group className="mb-3">
-                        <Form.Label className="fw-semibold">Subcategory</Form.Label>
+                        <Form.Label className="fw-semibold" style={{ color: "#282c3f", fontSize: "14px" }}>
+                          SUBCATEGORY <span style={{ color: "#ff3f6c" }}>*</span>
+                        </Form.Label>
                         <Form.Select
                           name="subcategory"
                           value={inputform.subcategory}
                           onChange={handleChange}
-                          className="custom-input"
+                          className="myntra-input"
+                          style={{ fontSize: "14px" }}
                         >
                           <option value="">Select Subcategory</option>
                           {getsubCatagory().map((brand, idx) => (
@@ -196,19 +216,22 @@ const AddProduct = () => {
                           ))}
                         </Form.Select>
                         {inputErr.subcategoryErr && (
-                          <small className="text-danger">{inputErr.subcategoryErr}</small>
+                          <small className="text-danger" style={{ fontSize: "12px" }}>{inputErr.subcategoryErr}</small>
                         )}
                       </Form.Group>
                     </Col>
 
                     <Col md={6}>
                       <Form.Group className="mb-3">
-                        <Form.Label className="fw-semibold">Brand</Form.Label>
+                        <Form.Label className="fw-semibold" style={{ color: "#282c3f", fontSize: "14px" }}>
+                          BRAND <span style={{ color: "#ff3f6c" }}>*</span>
+                        </Form.Label>
                         <Form.Select
                           name="brand"
                           value={inputform.brand}
                           onChange={handleChange}
-                          className="custom-input"
+                          className="myntra-input"
+                          style={{ fontSize: "14px" }}
                         >
                           <option value="">Select Brand</option>
                           {getBrandOptions().map((brand, idx) => (
@@ -218,123 +241,147 @@ const AddProduct = () => {
                           ))}
                         </Form.Select>
                         {inputErr.brandErr && (
-                          <small className="text-danger">{inputErr.brandErr}</small>
+                          <small className="text-danger" style={{ fontSize: "12px" }}>{inputErr.brandErr}</small>
                         )}
                       </Form.Group>
                     </Col>
                   </Row>
                 )}
 
-                {/* PRICE + STOCK */}
-                <Row>
-                  <Col md={6}>
+                {/* PRICE + STOCK + DISCOUNT */}
+                <Row className="mb-4">
+                  <Col md={4}>
                     <Form.Group className="mb-3">
-                      <Form.Label className="fw-semibold">Price</Form.Label>
+                      <Form.Label className="fw-semibold" style={{ color: "#282c3f", fontSize: "14px" }}>
+                        PRICE (₹) <span style={{ color: "#ff3f6c" }}>*</span>
+                      </Form.Label>
                       <Form.Control
                         type="number"
                         name="price"
                         value={inputform.price}
                         onChange={handleChange}
-                        placeholder="₹ 499"
-                        className="custom-input"
+                        placeholder="499"
+                        className="myntra-input"
+                        style={{ fontSize: "14px" }}
                       />
                       {inputErr.priceErr && (
-                        <small className="text-danger">{inputErr.priceErr}</small>
+                        <small className="text-danger" style={{ fontSize: "12px" }}>{inputErr.priceErr}</small>
                       )}
                     </Form.Group>
                   </Col>
 
-                  <Col md={6}>
+                  <Col md={4}>
                     <Form.Group className="mb-3">
-                      <Form.Label className="fw-semibold">Stock</Form.Label>
+                      <Form.Label className="fw-semibold" style={{ color: "#282c3f", fontSize: "14px" }}>
+                        DISCOUNT (%)
+                      </Form.Label>
+                      <Form.Control
+                        type="number"
+                        name="discount"
+                        value={inputform.discount}
+                        onChange={handleChange}
+                        placeholder="10"
+                        className="myntra-input"
+                        style={{ fontSize: "14px" }}
+                      />
+                      {inputErr.discountErr && (
+                        <small className="text-danger" style={{ fontSize: "12px" }}>{inputErr.discountErr}</small>
+                      )}
+                    </Form.Group>
+                  </Col>
+
+                  <Col md={4}>
+                    <Form.Group className="mb-3">
+                      <Form.Label className="fw-semibold" style={{ color: "#282c3f", fontSize: "14px" }}>
+                        STOCK <span style={{ color: "#ff3f6c" }}>*</span>
+                      </Form.Label>
                       <Form.Control
                         type="number"
                         name="stock"
                         value={inputform.stock}
                         onChange={handleChange}
-                        placeholder="eg. 20"
-                        className="custom-input"
+                        placeholder="20"
+                        className="myntra-input"
+                        style={{ fontSize: "14px" }}
                       />
                       {inputErr.stockErr && (
-                        <small className="text-danger">{inputErr.stockErr}</small>
+                        <small className="text-danger" style={{ fontSize: "12px" }}>{inputErr.stockErr}</small>
                       )}
                     </Form.Group>
                   </Col>
                 </Row>
 
-                {/* DISCOUNT */}
-                <Form.Group className="mb-3">
-                  <Form.Label className="fw-semibold">Discount (%)</Form.Label>
-                  <Form.Control
-                    type="number"
-                    name="discount"
-                    value={inputform.discount}
-                    onChange={handleChange}
-                    placeholder="eg. 10%"
-                    className="custom-input"
-                  />
-                  {inputErr.discountErr && (
-                    <small className="text-danger">{inputErr.discountErr}</small>
-                  )}
-                </Form.Group>
-
                 {/* IMAGES */}
-                <Row>
-                  {inputform.image.map((img, index) => (
-                    <Col md={6} key={index}>
-                      <Form.Group className="mb-3">
-                        <Form.Label className="fw-semibold">{`Image ${index + 1}`}</Form.Label>
-                        <Form.Control
-                          type="text"
-                          name="image"
-                          value={img}
-                          onChange={(e) => handleChange(e, index)}
-                          placeholder="Enter Image URL"
-                          className="custom-input"
-                        />
-                      </Form.Group>
-                    </Col>
-                  ))}
+                <div className="mb-4">
+                  <Form.Label className="fw-semibold mb-3" style={{ color: "#282c3f", fontSize: "14px" }}>
+                    PRODUCT IMAGES <span style={{ color: "#ff3f6c" }}>*</span>
+                  </Form.Label>
+                  <Row>
+                    {inputform.image.map((img, index) => (
+                      <Col md={6} key={index} className="mb-3">
+                        <Form.Group>
+                          <Form.Control
+                            type="text"
+                            name="image"
+                            value={img}
+                            onChange={(e) => handleChange(e, index)}
+                            placeholder={`Enter Image ${index + 1} URL`}
+                            className="myntra-input"
+                            style={{ fontSize: "14px" }}
+                          />
+                        </Form.Group>
+                      </Col>
+                    ))}
 
-                  {inputErr.imageErr && (
-                    <Col md={12}>
-                      <small className="text-danger">{inputErr.imageErr}</small>
-                    </Col>
-                  )}
-                </Row>
+                    {inputErr.imageErr && (
+                      <Col md={12}>
+                        <small className="text-danger" style={{ fontSize: "12px" }}>{inputErr.imageErr}</small>
+                      </Col>
+                    )}
+                  </Row>
+                </div>
 
-                {/* RATING */}
-                <Row>
+                {/* RATING + REVIEWS */}
+                <Row className="mb-4">
                   <Col md={6}>
                     <Form.Group className="mb-3">
-                      <Form.Label className="fw-semibold">Rating</Form.Label>
+                      <Form.Label className="fw-semibold" style={{ color: "#282c3f", fontSize: "14px" }}>
+                        RATING <span style={{ color: "#ff3f6c" }}>*</span>
+                      </Form.Label>
                       <Form.Control
                         type="number"
                         name="rating"
                         value={inputform.rates.rating}
                         onChange={handleChange}
-                        placeholder="1 to 5"
-                        className="custom-input"
+                        placeholder="4.5"
+                        step="0.1"
+                        min="0"
+                        max="5"
+                        className="myntra-input"
+                        style={{ fontSize: "14px" }}
                       />
                       {inputErr.ratingErr && (
-                        <small className="text-danger">{inputErr.ratingErr}</small>
+                        <small className="text-danger" style={{ fontSize: "12px" }}>{inputErr.ratingErr}</small>
                       )}
                     </Form.Group>
                   </Col>
 
                   <Col md={6}>
                     <Form.Group className="mb-3">
-                      <Form.Label className="fw-semibold">Reviews</Form.Label>
+                      <Form.Label className="fw-semibold" style={{ color: "#282c3f", fontSize: "14px" }}>
+                        REVIEWS COUNT <span style={{ color: "#ff3f6c" }}>*</span>
+                      </Form.Label>
                       <Form.Control
                         type="number"
                         name="rests"
                         value={inputform.rates.rests}
                         onChange={handleChange}
-                        placeholder="eg. 120"
-                        className="custom-input"
+                        placeholder="120"
+                        className="myntra-input"
+                        style={{ fontSize: "14px" }}
                       />
                       {inputErr.restsErr && (
-                        <small className="text-danger">{inputErr.restsErr}</small>
+                        <small className="text-danger" style={{ fontSize: "12px" }}>{inputErr.restsErr}</small>
                       )}
                     </Form.Group>
                   </Col>
@@ -342,25 +389,49 @@ const AddProduct = () => {
 
                 {/* DESCRIPTION */}
                 <Form.Group className="mb-4">
-                  <Form.Label className="fw-semibold">Description</Form.Label>
+                  <Form.Label className="fw-semibold" style={{ color: "#282c3f", fontSize: "14px" }}>
+                    PRODUCT DESCRIPTION <span style={{ color: "#ff3f6c" }}>*</span>
+                  </Form.Label>
                   <Form.Control
                     as="textarea"
-                    rows={3}
+                    rows={4}
                     name="description"
                     value={inputform.description}
                     onChange={handleChange}
-                    placeholder="Write something about this product..."
-                    className="custom-input"
+                    placeholder="Describe the product features, material, sizing information, and other important details..."
+                    className="myntra-input"
+                    style={{ fontSize: "14px", resize: "none" }}
                   />
                   {inputErr.descriptionErr && (
-                    <small className="text-danger">{inputErr.descriptionErr}</small>
+                    <small className="text-danger" style={{ fontSize: "12px" }}>{inputErr.descriptionErr}</small>
                   )}
                 </Form.Group>
 
-                <div className="text-center">
-                  <Button type="submit" className="add-btn px-5 py-2 fw-semibold">
-                    ➕ Add Product
-                  </Button>
+                {/* BUTTONS */}
+                <div className="text-center pt-3">
+                  <Row className="justify-content-center">
+                    <Col md={8}>
+                      <Row className="g-3">
+                        <Col md={6}>
+                          <Button 
+                            type="button" 
+                            className="myntra-cancel-btn w-100 py-2 fw-semibold"
+                            onClick={handleCancel}
+                          >
+                            CANCEL
+                          </Button>
+                        </Col>
+                        <Col md={6}>
+                          <Button 
+                            type="submit" 
+                            className="myntra-btn w-100 py-2 fw-semibold"
+                          >
+                            ADD PRODUCT
+                          </Button>
+                        </Col>
+                      </Row>
+                    </Col>
+                  </Row>
                 </div>
               </Form>
             </Card.Body>

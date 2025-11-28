@@ -48,7 +48,7 @@ const Slider3 = () => {
               {slide.map((img, i) => (
                 <div key={i} className="flex-fill px-1">
                   <a href="#">
-                    <img rc={img} lt={`slide-${idx}-img-${i}`} className="img-fluid" tyle={{
+                    <img src={img} lt={`slide-${idx}-img-${i}`} className="img-fluid" tyle={{
                       height: "fit-content",
                       objectFit: "contain",
                       transition: "transform 0.3s",
