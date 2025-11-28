@@ -1,0 +1,27 @@
+.custom-checkbox .form-check-input:checked {
+  background-color: #ff3f6c !important;
+  border-color: #ff3f6c !important;
+  outline:#ff3f6c !important ;
+}
+
+.custom-range::-webkit-slider-thumb {
+  background: #ff3f6c !important;
+}
+
+.custom-range::-moz-range-thumb {
+  background: #ff3f6c !important;
+}
+
+.custom-range::-webkit-slider-runnable-track {
+  background: #ffc6d1 !important;
+}
+
+.custom-range::-moz-range-track {
+  background: #ffc6d1 !important;
+}
+
+
+*{
+  object-position: center;
+  /* position: absolute; */
+}
