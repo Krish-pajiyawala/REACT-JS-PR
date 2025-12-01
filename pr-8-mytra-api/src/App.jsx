@@ -21,9 +21,6 @@ function App() {
       <Route path='/kids' element={<Kids/>}/>
       <Route path='/addproduct' element={<AddProduct/>}/>
       <Route path='/product-info/:id' element={<ViewProduct/>}/>
-      {/* <Route path='/home' element={"Progress"}/> */}
-      
-      <Route path='/home' element={<Home/>}/>
       <Route path='/beauty' element={"Progress"}/>
       <Route path='/edit-product/:id' element={<EditProduct/>}/>
      </Routes>
@@ -32,4 +29,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
