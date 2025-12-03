@@ -10,7 +10,7 @@ import {
 } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { AiFillStar } from "react-icons/ai";
-import { getallproduct } from "../Services/Action/AddProductAction";
+import { getallproduct, getallproductAsync } from "../Services/Action/AddProductAction";
 import Filters from "../Filters/Filters";
 import { useNavigate } from "react-router-dom";
 import { BsSliders } from "react-icons/bs";
@@ -46,7 +46,7 @@ const Man = () => {
     setSlideIndex(0);
   }
   useEffect(() => {
-    dispatch(getallproduct());
+    dispatch(getallproductAsync());
   }, [dispatch]);
 
   const manProducts = products.filter(

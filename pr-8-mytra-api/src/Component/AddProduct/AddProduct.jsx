@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Form, Button, Row, Col, Container, Card } from "react-bootstrap";
 import { useDispatch } from "react-redux";
-import { addproduct } from "../Services/Action/AddProductAction";
+import { addproduct, addproductAsync } from "../Services/Action/AddProductAction";
 import generateUniqueId from "generate-unique-id";
 import { useNavigate } from "react-router-dom";
 import "./AddProduct.css";
@@ -78,14 +78,13 @@ const AddProduct = () => {
           useLetters: false,
         });
 
-      dispatch(addproduct(inputform));
+      dispatch(addproductAsync(inputform));
       setinputform(initialState);
       navigate("/");
     }
   };
 
   const handleCancel = () => {
-    // Reset form and navigate back
     setinputform(initialState);
     setinputErr({});
     navigate("/");
@@ -132,7 +131,6 @@ const AddProduct = () => {
             }}
           >
             <Card.Body className="p-5">
-              {/* Header similar to Myntra */}
               <div className="text-center mb-4 border-bottom pb-3">
                 <h2 className="fw-bold mb-2" style={{ 
                   letterSpacing: "1px", 
@@ -147,7 +145,6 @@ const AddProduct = () => {
               </div>
 
               <Form onSubmit={handleSubmit}>
-                {/* TITLE + CATEGORY */}
                 <Row className="mb-4">
                   <Col md={6}>
                     <Form.Group className="mb-3">
@@ -193,7 +190,6 @@ const AddProduct = () => {
                   </Col>
                 </Row>
 
-                {/* SUBCATEGORY + BRAND */}
                 {inputform.category && (
                   <Row className="mb-4">
                     <Col md={6}>
@@ -248,7 +244,6 @@ const AddProduct = () => {
                   </Row>
                 )}
 
-                {/* PRICE + STOCK + DISCOUNT */}
                 <Row className="mb-4">
                   <Col md={4}>
                     <Form.Group className="mb-3">
@@ -311,7 +306,6 @@ const AddProduct = () => {
                   </Col>
                 </Row>
 
-                {/* IMAGES */}
                 <div className="mb-4">
                   <Form.Label className="fw-semibold mb-3" style={{ color: "#282c3f", fontSize: "14px" }}>
                     PRODUCT IMAGES <span style={{ color: "#ff3f6c" }}>*</span>
@@ -341,7 +335,6 @@ const AddProduct = () => {
                   </Row>
                 </div>
 
-                {/* RATING + REVIEWS */}
                 <Row className="mb-4">
                   <Col md={6}>
                     <Form.Group className="mb-3">
@@ -387,7 +380,6 @@ const AddProduct = () => {
                   </Col>
                 </Row>
 
-                {/* DESCRIPTION */}
                 <Form.Group className="mb-4">
                   <Form.Label className="fw-semibold" style={{ color: "#282c3f", fontSize: "14px" }}>
                     PRODUCT DESCRIPTION <span style={{ color: "#ff3f6c" }}>*</span>
@@ -407,7 +399,6 @@ const AddProduct = () => {
                   )}
                 </Form.Group>
 
-                {/* BUTTONS */}
                 <div className="text-center pt-3">
                   <Row className="justify-content-center">
                     <Col md={8}>

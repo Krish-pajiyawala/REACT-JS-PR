@@ -1,63 +1,51 @@
-import { getproductData, setProductData } from "../Storage/StorageData"
-
-const initialvalue = 
-    {
-        products: getproductData(),
-        product: null,
-        isLoding: false
-    }
-
-
-
-
+// AddProductReducer.js
+const initialvalue = {
+    products: [],
+    product: null,
+    iscreated: false,
+    isLoding: false,
+};
 
 export const AddProductRedux = (state = initialvalue, action) => {
-
     switch (action.type) {
         case "ADD_PRODUCT":
-            let data = getproductData()
-            data.push(action.payload)
-            setProductData(data)
             return {
                 ...state,
-                products: data
-            }
+                iscreated: true,
+                // add the created product from payload (server returns id)
+                products: [...state.products, action.payload],
+            };
 
         case "GET_PRODUCTS":
-            const allproducts = getproductData()
-            return{
+            return {
                 ...state,
-                products:allproducts ||[]
-            }
-        case "DELETE_PRODUCT":
-            const productall = getproductData()
-            let uproducts = productall.filter((product)=>product.id !==action.payload)
-            setProductData(uproducts)
-            return{
-                ...state,
-                products:uproducts
-            }     
-        case "EDIT_PRODUCT" :
-      let getproducts = getproductData() 
-            let findeproduct = getproducts.find((product)=>product.id === action.payload) 
-             
-      return{
-        ...state,
-        product:findeproduct
-      }
+                iscreated: false,
+                products: action.payload,
+            };
 
-      case "UPDATE_PRODUCT" :
-      let productData = getproductData()
-        const updatedProducts = productData.map((product) =>
-    product.id === action.payload.id ? action.payload  : product
-  );
-      setProductData(updatedProducts)
-     return{
-      ...state,
-      products:updatedProducts,
-      product:null
-     }       
+        case "DELETE_PRODUCT":
+            return {
+                ...state,
+                products: state.products.filter((p) => p.id !== action.payload),
+            };
+
+        case "EDIT_PRODUCT":
+            // payload is the product object to edit
+            return {
+                ...state,
+                product: action.payload,
+            };
+
+        case "UPDATE_PRODUCT":
+            return {
+                ...state,
+                products: state.products.map((p) =>
+                    p.id === action.payload.id ? action.payload : p
+                ),
+                product: null,
+            };
+
         default:
-            return state
+            return state;
     }
-}
+};
