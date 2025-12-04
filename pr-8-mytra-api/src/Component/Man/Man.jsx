@@ -10,7 +10,7 @@ import {
 } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { AiFillStar } from "react-icons/ai";
-import { getallproduct, getallproductAsync } from "../Services/Action/AddProductAction";
+import {  getallproductAsync } from "../Services/Action/AddProductAction";
 import Filters from "../Filters/Filters";
 import { useNavigate } from "react-router-dom";
 import { BsSliders } from "react-icons/bs";

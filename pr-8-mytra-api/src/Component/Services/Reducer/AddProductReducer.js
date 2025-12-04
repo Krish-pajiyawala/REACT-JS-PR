@@ -12,8 +12,6 @@ export const AddProductRedux = (state = initialvalue, action) => {
             return {
                 ...state,
                 iscreated: true,
-                // add the created product from payload (server returns id)
-                products: [...state.products, action.payload],
             };
 
         case "GET_PRODUCTS":

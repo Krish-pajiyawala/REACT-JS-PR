@@ -1,0 +1,76 @@
+/* Add to your global CSS file */
+.thumbnail-container {
+  transition: all 0.3s ease;
+}
+
+.thumbnail-container:hover {
+  border-color: #ff3f6c !important;
+  transform: scale(1.05);
+}
+
+.thumbnail-container.active {
+  border-color: #ff3f6c !important;
+  box-shadow: 0 0 0 2px rgba(255, 63, 108, 0.1);
+}
+
+/* Custom button styles */
+.btn-danger {
+  background-color: #ff3f6c !important;
+  border-color: #ff3f6c !important;
+}
+
+.btn-danger:hover {
+  background-color: #ff1f5a !important;
+  border-color: #ff1f5a !important;
+}
+
+.btn-outline-danger {
+  color: #ff3f6c !important;
+  border-color: #ff3f6c !important;
+}
+
+.btn-outline-danger:hover {
+  background-color: #ff3f6c !important;
+  color: white !important;
+}
+
+/* Card hover effects */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Custom form controls */
+.form-control:focus {
+  border-color: #ff3f6c;
+  box-shadow: 0 0 0 0.25rem rgba(255, 63, 108, 0.25);
+}
+
+/* Badge customization */
+.badge.bg-danger {
+  background-color: #ff3f6c !important;
+}
+
+.badge.bg-success {
+  background-color: #03a685 !important;
+}
+
+/* Rating stars */
+.text-warning {
+  color: #ffc107 !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .thumbnail-container {
+    height: 60px;
+  }
+  
+  .thumbnail-container img {
+    height: 56px !important;
+  }
+}

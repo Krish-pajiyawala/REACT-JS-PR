@@ -5,7 +5,7 @@
       "title": "gggg",
       "category": "kids",
       "subcategory": "Shirt",
-      "brand": "Mini Club",
+      "brand": "Gap Kids",
       "price": "500",
       "discount": "20",
       "stock": "20",
@@ -60,6 +60,27 @@
       ],
       "rates": {
         "rating": "5",
+        "rests": "20"
+      }
+    },
+    {
+      "id": "PR0467965341",
+      "title": "hhhhh",
+      "category": "men",
+      "subcategory": "Jeans",
+      "brand": "Allen Solly",
+      "price": "499",
+      "discount": "10",
+      "stock": "20",
+      "description": "nice",
+      "image": [
+        "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQHhMNzK3-vKq0XzGzZSLFrUAdXbOcZBffyXvn6-kd46xUwf0U9aGsh90nWA5FId_1XKRRUgKiCXGImaHkWjoXYzld3vrzhm8JpP_nq3fI_JxHhN80q_5sv",
+        "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQuo0YkR7bPiwrV1yuPe0OjitMzwnV4QnnWvSNqqbCIIu3uoeACBwEt8JHDIhbWopw8sbJuT1FJ8Mjfv0EPyorh23UU5OusF3RDsGQ6G-cCFwor1mM5vT1i",
+        "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcT5C8kAL7Ropv-gQhDvvR5CcaLANsWta6NPGDgKWg7vAxrT1zylyLm30BV42M02I3_D-hE49McO64ITglAnkZ9UVSI3CP3KQH6AWc2mBPbycjjjQ9YW9EA",
+        "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRDVL6Op6GJS_GsAVrsBk6nkYUF8caSNocZ1NH0Fc6P_hJUkgYcj42r1BkSONdqD7pkQBudQnTW7gUnYdgKNQrZkeJFo0LudB9t6oabUgHD"
+      ],
+      "rates": {
+        "rating": "4.9",
         "rests": "20"
       }
     }
