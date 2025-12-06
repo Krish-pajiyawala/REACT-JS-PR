@@ -1,0 +1,26 @@
+.product-card{
+  cursor: pointer !important;
+}
+
+.products-cards{
+  width: 250px !important;
+}
+
+.custom-checkbox .form-check-input:checked {
+  background-color: #ff3f6c !important;
+  border-color: #ff3f6c !important;
+}
+
+
+@media (max-width:576px) {
+   .products-cards{
+  width: unset !important ;
+}
+}
+
+
+@media (max-width:768px) {
+   .products-cards{
+  width: 250px !important ;
+}
+}

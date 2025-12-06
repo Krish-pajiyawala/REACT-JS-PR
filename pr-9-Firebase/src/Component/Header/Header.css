@@ -1,0 +1,34 @@
+
+.offcanvas-img-2{
+background-image: linear-gradient(270deg, #ffe5b2, #fff);
+}
+
+@media (max-width:576px) {
+   .header-offcanvas{
+    width: 70% !important;
+   }
+}
+
+@media (min-width:768px) {
+   .header-offcanvas{
+    width: unset ;
+   }
+}
+
+@media (min-width:1200px) {
+    .header-search{
+        width: 300px !important;
+    }
+}
+@media (min-width:1400px) {
+    .header-search{
+        width: 400px !important;
+    }
+}
+
+
+
+
+
+
+

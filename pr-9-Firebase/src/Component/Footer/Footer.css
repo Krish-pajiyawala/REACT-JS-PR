@@ -1,0 +1,454 @@
+.new-footer {
+    background: #f4f4f6;
+    color: #2a2d3a;
+    font-family: "Poppins", sans-serif;
+    border-top: 1px solid #e5e5e5;
+  }
+  
+  /* HEADINGS */
+  .footer-heading {
+    font-size: 14px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 15px;
+  }
+  
+  /* MENU */
+  .footer-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-menu li {
+    font-size: 13px;
+    padding: 4px 0;
+    color: #555;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  .footer-menu li:hover {
+    color: #000;
+    transform: translateX(4px);
+  }
+  
+  /* APP BUTTONS */
+  .app-btn {
+    width: 130px;
+    transition: 0.2s;
+  }
+  
+  .app-btn:hover {
+    transform: scale(1.05);
+  }
+  
+  /* SOCIAL ICONS */
+  .social-box svg {
+    font-size: 22px;
+    margin-right: 15px;
+    color: #555;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  .social-box svg:hover {
+    color: #000;
+    transform: scale(1.2);
+  }
+  
+  /* GUARANTEE BOX */
+  .guarantee-box {
+    align-items: center;
+    margin-bottom: 18px;
+  }
+  
+  .icon-circle {
+    width: 38px;
+    height: 38px;
+    background: #f4f4f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    margin-right: 10px;
+  }
+  
+  .guarantee-box p {
+    margin: 0;
+    font-size: 13px;
+    color: #444;
+    line-height: 19px;
+  }
+
+  .icon-circle {
+  width: 50px;
+  height: 50px;
+  background: #f4f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;       
+  padding: 5px;           
+}
+
+.icon-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;     
+}
+
+.footer-bottom {
+  padding: 40px 0;
+  background: #fafafa;
+  color: #555;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Titles */
+.footer-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+/* Popular Searches */
+.popular-items {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.contact-text {
+  font-size: 13px;
+  margin-bottom: 25px;
+}
+
+.contact-text a {
+  color: #3466cb;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* COPYRIGHT FLEX */
+.copyright-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #666;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+/* Office Address */
+.address {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.office-info-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  text-align: right;
+}
+
+.office-info {
+  font-size: 13px;
+  color: #666;
+}
+
+.office-info a {
+  color: #3466cb;
+  text-decoration: none;
+}
+
+.shopping-info-section {
+  padding: 40px 0;
+  background: #fff;
+  font-family: "Poppins", sans-serif;
+  color: #444;
+}
+
+.info-heading {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.info-para {
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.info-list {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #555;
+  padding-left: 18px;
+}
+
+.info-list li {
+  margin-bottom: 18px;
+}
+
+.additional-info-section {
+  padding: 40px 0;
+  background: #fff;
+  color: #444;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Headings */
+.info-heading {
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 25px;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+.sub-heading {
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+/* Paragraphs */
+.info-para {
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* Ordered List */
+.info-list {
+  font-size: 14px;
+  line-height: 1.8;
+  padding-left: 18px;
+  color: #555;
+}
+
+.info-list li {
+  margin-bottom: 18px;
+}
+
+/* Unordered List */
+.inside-list {
+  padding-left: 20px;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.inside-list li {
+  margin-bottom: 10px;
+}
+
+.myntra-section {
+  line-height: 1.7;
+  color: #444;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Heading styles */
+.myntra-section h5 {
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 18px;
+}
+
+.myntra-section h6 {
+  font-weight: 600;
+  margin-top: 25px;
+  color: #222;
+}
+
+/* Paragraph smoothing */
+.myntra-section p {
+  margin-bottom: 14px;
+  font-size: 15.5px;
+}
+
+.myntra-section {
+  padding: 40px 0;
+  color: #333;
+  font-family: "Helvetica", "Arial", sans-serif;
+  line-height: 1.7;
+}
+
+/* Headings (like Smart Men's Clothing, Quick Tips etc.) */
+.myntra-section h6 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+/* Paragraph styling */
+.myntra-section p {
+  font-size: 15px;
+  margin-bottom: 12px;
+  color: #444;
+}
+
+/* Bold text inside paragraphs */
+.myntra-section b {
+  color: #222;
+  font-weight: 600;
+} 
+
+ /* Space between sections */
+.myntra-block {
+  margin-bottom: 28px;
+}
+
+
+.history-wrapper {
+  max-width: 900px;
+  color: #444;
+  line-height: 1.7;
+}
+
+.history-title {
+  font-weight: 700;
+  font-size: 15px;
+  margin-bottom: 12px;
+  color: #2d2d2d;
+}
+
+.history-text {
+  font-size: 15px;
+  margin-bottom: 14px;
+  color: #555;
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (min-width: 1200px) {
+  .new-footer {
+    padding: 60px 0;
+  }
+
+  .footer-menu li {
+    font-size: 14px;
+  }
+
+  .info-para,
+  .history-text {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 992px) {
+  .footer-heading {
+    font-size: 13px;
+  }
+
+  .footer-menu li {
+    font-size: 12px;
+  }
+
+  .office-info-right {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .app-btn {
+    width: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .new-footer .col-md-3 {
+    margin-bottom: 25px;
+  }
+
+  .popular-items {
+    font-size: 12.5px;
+    text-align: justify;
+  }
+
+  .social-box svg {
+    font-size: 20px;
+    margin-right: 12px;
+  }
+
+  .copyright-row {
+    flex-direction: column;
+    text-align: center;
+    gap: 6px;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-title,
+  .footer-heading {
+    font-size: 13px;
+    text-align: left;
+  }
+
+  .footer-menu li {
+    font-size: 12px;
+  }
+
+  .app-btn {
+    width: 110px;
+  }
+
+  .icon-circle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .guarantee-box p {
+    font-size: 12px;
+  }
+
+  .address,
+  .office-info {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .info-para {
+    font-size: 13px;
+  }
+
+  .myntra-section p {
+    font-size: 14px;
+  }
+
+  .inside-list li,
+  .info-list li {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 450px) {
+  .popular-items {
+    font-size: 11.5px;
+  }
+
+  .social-box svg {
+    font-size: 18px;
+  }
+
+  .app-btn {
+    width: 100px;
+  }
+
+  .copyright-row p {
+    font-size: 12px;
+  }
+
+  .history-text {
+    font-size: 13px;
+  }
+}

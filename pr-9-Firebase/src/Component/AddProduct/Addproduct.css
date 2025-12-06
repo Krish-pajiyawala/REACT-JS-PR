@@ -1,0 +1,200 @@
+.add-product-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.add-product-card:hover {
+  transform: scale(1.01);
+  box-shadow: 0px 15px 35px rgba(0,0,0,0.15);
+}
+
+.custom-input {
+  border-radius: 10px !important;
+  padding: 10px 12px !important;
+  border: 1px solid #d1d1d1 !important;
+  transition: all 0.25s ease !important;
+  background: #fafbff !important;
+}
+
+.custom-input:focus {
+  border-color: #4a6cf7 !important;
+  box-shadow: 0px 0px 8px rgba(74,108,247,0.4) !important;
+  background: #ffffff !important;
+}
+
+.add-btn {
+  background: linear-gradient(135deg, #4a6cf7, #6b8cff);
+  border: none !important;
+  border-radius: 12px;
+  transition: all 0.25s ease;
+  color: white;
+  font-size: 16px;
+}
+
+.add-btn:hover {
+  background: linear-gradient(135deg, #3a5ae0, #5f7df0);
+  transform: translateY(-2px);
+}
+
+.add-btn:active {
+  transform: scale(0.97);
+}
+.add-product-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.add-product-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+}
+
+.myntra-input {
+  border-radius: 2px !important;
+  padding: 12px 16px !important;
+  border: 1px solid #d4d5d9 !important;
+  transition: all 0.25s ease !important;
+  background: #ffffff !important;
+  font-size: 14px !important;
+  color: #282c3f !important;
+}
+
+.myntra-input:focus {
+  border-color: #ff3f6c !important;
+  box-shadow: 0 0 0 1px #ff3f6c !important;
+  background: #ffffff !important;
+}
+
+.myntra-input::placeholder {
+  color: #94969f !important;
+  font-size: 14px !important;
+}
+
+.myntra-btn {
+  background: #ff3f6c !important;
+  border: none !important;
+  border-radius: 2px !important;
+  transition: all 0.25s ease !important;
+  color: white !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.5px !important;
+  padding: 12px 48px !important;
+  text-transform: uppercase;
+}
+
+.myntra-btn:hover {
+  background: #ff527b !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(255, 63, 108, 0.3);
+}
+
+.myntra-btn:active {
+  transform: scale(0.98);
+}
+
+/* Myntra-like form label styling */
+.form-label {
+  margin-bottom: 8px !important;
+  font-weight: 600 !important;
+}
+
+/* Custom select arrow for Myntra style */
+.form-select {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e") !important;
+  background-position: right 12px center !important;
+  background-repeat: no-repeat !important;
+  background-size: 16px !important;
+  padding-right: 40px !important;
+}
+
+.add-product-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.add-product-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+}
+
+.myntra-input {
+  border-radius: 2px !important;
+  padding: 12px 16px !important;
+  border: 1px solid #d4d5d9 !important;
+  transition: all 0.25s ease !important;
+  background: #ffffff !important;
+  font-size: 14px !important;
+  color: #282c3f !important;
+}
+
+.myntra-input:focus {
+  border-color: #ff3f6c !important;
+  box-shadow: 0 0 0 1px #ff3f6c !important;
+  background: #ffffff !important;
+}
+
+.myntra-input::placeholder {
+  color: #94969f !important;
+  font-size: 14px !important;
+}
+
+.myntra-btn {
+  background: #ff3f6c !important;
+  border: none !important;
+  border-radius: 2px !important;
+  transition: all 0.25s ease !important;
+  color: white !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.5px !important;
+  padding: 12px 24px !important;
+  text-transform: uppercase;
+}
+
+.myntra-btn:hover {
+  background: #ff527b !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(255, 63, 108, 0.3);
+}
+
+.myntra-btn:active {
+  transform: scale(0.98);
+}
+
+.myntra-cancel-btn {
+  background: #ffffff !important;
+  border: 1px solid #d4d5d9 !important;
+  border-radius: 2px !important;
+  transition: all 0.25s ease !important;
+  color: #282c3f !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.5px !important;
+  padding: 12px 24px !important;
+  text-transform: uppercase;
+}
+
+.myntra-cancel-btn:hover {
+  background: #f5f5f6 !important;
+  border-color: #94969f !important;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  color: #282c3f !important;
+}
+
+.myntra-cancel-btn:active {
+  transform: scale(0.98);
+}
+
+/* Myntra-like form label styling */
+.form-label {
+  margin-bottom: 8px !important;
+  font-weight: 600 !important;
+}
+
+/* Custom select arrow for Myntra style */
+.form-select {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e") !important;
+  background-position: right 12px center !important;
+  background-repeat: no-repeat !important;
+  background-size: 16px !important;
+  padding-right: 40px !important;
+}
